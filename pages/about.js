@@ -1,9 +1,12 @@
 import React from 'react'
+import Navigation from './components/navigation'
 
 function about() {
     return (
         <div>
-            asdfsdfsdfsfsdf
+            
+            <Navigation />
+            dadasdasd
         </div>
     )
 }

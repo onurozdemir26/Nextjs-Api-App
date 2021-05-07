@@ -1,25 +1,34 @@
-import Link from 'next/link'
+import Navigation from "./components/navigation";
+import unfetch from "isomorphic-unfetch";
 
- function Home() {
+ function İndex({characters}) {
+
   return (
-    <ul className="navbar">
-      <li>
-        <Link href="/">
-          <a>Ana Sayfa</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>Hakkımızda</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/blog/hello-world">
-          <a>İletişim</a>
-        </Link>
-      </li>
-    </ul>
+    <div>
+      
+      <div>
+      <Navigation />
+      </div>
+      <div>
+      <ul>
+        {characters.results.map(character =>(
+          <li key={character.id}>{character.name}</li>
+        ))}
+      </ul>
+      </div>
+      
+    </div>
   )
 }
 
-export default Home;
+ export async function getStaticProps() {
+   const data = await unfetch("https://rickandmortyapi.com/api/character/")
+   const characters = await data.json()
+   return {
+    props: {
+      characters
+     }, 
+   }
+ }
+
+export default İndex;
