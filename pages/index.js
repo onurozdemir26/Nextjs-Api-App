@@ -1,5 +1,6 @@
 import Navigation from "./components/navigation";
 import unfetch from "isomorphic-unfetch";
+import Link from 'next/link'
 
  function İndex({characters}) {
 
@@ -8,11 +9,16 @@ import unfetch from "isomorphic-unfetch";
       
       <div>
       <Navigation />
+      
       </div>
       <div>
       <ul>
         {characters.results.map(character =>(
-          <li key={character.id}>{character.name}</li>
+          <li key={character.id}>
+            <Link href="/character/[id]" as={`/character/${character.id}`}>
+             <a>{character.name}</a>
+            </Link>
+            </li>
         ))}
       </ul>
       </div>

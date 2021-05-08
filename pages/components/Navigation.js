@@ -15,11 +15,7 @@ function Navigation() {
                         <a>Hakkımızda</a>
                     </Link>
                 </li>
-                <li>
-                    <Link href="/blog/hello-world">
-                        <a>İletişim</a>
-                    </Link>
-                </li>
+                
             </ul>
         </div>
     )
