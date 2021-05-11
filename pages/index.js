@@ -1,6 +1,7 @@
 import Navigation from "./components/navigation";
 import unfetch from "isomorphic-unfetch";
 import Link from 'next/link'
+import slug from 'slug'
 
  function İndex({characters}) {
 
@@ -13,12 +14,15 @@ import Link from 'next/link'
       </div>
       <div>
       <ul>
-        {characters.results.map(character =>(
+        {characters.results.map(character => (
           <li key={character.id}>
-            <Link href="/character/[id]" as={`/character/${character.id}`}>
-             <a>{character.name}</a>
+            <Link
+              href="/character/[slug]"
+              as={`/character/${slug(character.name)}-${character.id}`}
+            >
+              <a>{character.name}</a>
             </Link>
-            </li>
+          </li>
         ))}
       </ul>
       </div>
@@ -27,14 +31,15 @@ import Link from 'next/link'
   )
 }
 
- export async function getStaticProps() {
-   const data = await unfetch("https://rickandmortyapi.com/api/character/")
-   const characters = await data.json()
-   return {
+export async function getStaticProps() {
+  const data = await unfetch('https://rickandmortyapi.com/api/character/')
+  const characters = await data.json()
+  return {
     props: {
       characters
-     }, 
-   }
- }
+    }
+  }
+}
+
 
 export default İndex;
