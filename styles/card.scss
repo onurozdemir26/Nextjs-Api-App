@@ -1,10 +1,12 @@
 .card {
+    
     list-style-type: none;
     
     li{
-        
+        list-style-type: none;
         align-items: center;
         text-align: center;
+        
         figure img{
             transition: width 0.5s, height 0.5s, background-color 1s, transform 0.5s;
             border-radius: 5rem;

@@ -1,5 +1,6 @@
 .navbar {
     list-style-type: none;
+    
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -8,18 +9,33 @@
     justify-content: center;
     padding-top: 10px 10px;
 
+
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    li {
+        a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            display: block;
+            color: rgba(255, 255, 255, 0.87);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            align-items: center;
+            list-style-type: none;
+            transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.2s;
 
-
-    &:hover {
-        background-color: #111;
+            &:active {
+                background-color: rgba(17, 17, 17, 0.678);
+                // width: 300px;
+                // height: 300px;
+                transform: skewY(60deg), skewX(60deg);
+            }
+        }
     }
 }

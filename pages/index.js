@@ -1,5 +1,6 @@
 import Navigation from "./components/navigation";
 import unfetch from "isomorphic-unfetch";
+
 import Link from 'next/link'
 import slug from 'slug'
 
@@ -10,12 +11,19 @@ import slug from 'slug'
       
       <div >
       <Navigation />
-      
+      {/* <Image
+        src="/background-1.jpg"
+        alt="Ricky And Morty"
+        width={1920}
+        height={1080}
+        className="img"
+        layout="fixed"
+      /> */}
       </div>
-      <div >
+      <div className="table">
       <ul >
         {characters.results.map(character => (
-          <li className="list" key={character.id}>
+          <li  key={character.id}>
             <Link
               href="/character/[slug]"
               as={`/character/${slug(character.name)}-${character.id}`}
