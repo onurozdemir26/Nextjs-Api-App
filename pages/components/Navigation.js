@@ -10,11 +10,11 @@ function Navigation() {
                         <a>Ana Sayfa</a>
                     </Link>
                 </li>
-                <li className="list">
+                {/* <li className="list">
                     <Link href="/about">
                         <a>Hakkımda</a>
                     </Link>
-                </li>
+                </li> */}
                 
             </ul>
         </div>

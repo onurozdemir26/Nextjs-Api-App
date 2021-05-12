@@ -1,0 +1,20 @@
+.card {
+    list-style-type: none;
+    
+    li{
+        
+        align-items: center;
+        text-align: center;
+        figure img{
+            transition: width 0.5s, height 0.5s, background-color 1s, transform 0.5s;
+            border-radius: 5rem;
+            width: 125px;
+            &:hover{
+                width: 300px;
+                height: 300px;
+                transform: skewY(60deg), skewX(60deg);
+            }
+        }
+        
+    }
+}

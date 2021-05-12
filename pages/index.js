@@ -8,12 +8,12 @@ import slug from 'slug'
   return (
     <div>
       
-      <div>
+      <div >
       <Navigation />
       
       </div>
-      <div>
-      <ul>
+      <div >
+      <ul >
         {characters.results.map(character => (
           <li className="list" key={character.id}>
             <Link

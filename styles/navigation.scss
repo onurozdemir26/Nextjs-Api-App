@@ -7,34 +7,19 @@
     display: flex;
     justify-content: center;
     padding-top: 10px 10px;
+
 }
-    .list {
 
 
-        a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-    
-    
-            &:hover {
-                background-color: #111;
-            }
-        }
-    }
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 
 
-.card {
-    list-style-type: none;
-    
-    li{
-        align-items: center;
-        text-align: center;
-        figure img{
-            border-radius: 5rem;
-        }
-        
+    &:hover {
+        background-color: #111;
     }
 }
