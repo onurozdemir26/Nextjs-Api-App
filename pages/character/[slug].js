@@ -8,13 +8,16 @@ function characterDetails({ character }) {
     return (
         <div>
             <Navigation />
-            <div>
-                <h1>{character.name}</h1>
+            <ul className="card">
+                <li>
+                    
 
-                <figure>
-                    <img src={character.image} alt={character.name} />
-                </figure>
-            </div>
+                    <figure>
+                        <img src={character.image} alt={character.name} />
+                    </figure>
+                    <h1>{character.name}</h1>
+                </li>
+            </ul>
         </div>
     )
 }

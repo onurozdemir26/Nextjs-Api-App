@@ -5,12 +5,12 @@ function Navigation() {
     return (
         <div>
             <ul className="navbar">
-                <li>
+                <li className="list">
                     <Link href="/">
                         <a>Ana Sayfa</a>
                     </Link>
                 </li>
-                <li>
+                <li className="list">
                     <Link href="/about">
                         <a>Hakkımda</a>
                     </Link>

@@ -8,20 +8,33 @@
     justify-content: center;
     padding-top: 10px 10px;
 }
-
-li {
-
-
-    a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+    .list {
 
 
-        &:hover {
-            background-color: #111;
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+    
+    
+            &:hover {
+                background-color: #111;
+            }
         }
+    }
+
+
+.card {
+    list-style-type: none;
+    
+    li{
+        align-items: center;
+        text-align: center;
+        figure img{
+            border-radius: 5rem;
+        }
+        
     }
 }

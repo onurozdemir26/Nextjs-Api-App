@@ -15,7 +15,7 @@ import slug from 'slug'
       <div>
       <ul>
         {characters.results.map(character => (
-          <li key={character.id}>
+          <li className="list" key={character.id}>
             <Link
               href="/character/[slug]"
               as={`/character/${slug(character.name)}-${character.id}`}
