@@ -12,7 +12,7 @@ function Navigation() {
                 </li>
                 <li>
                     <Link href="/about">
-                        <a>Hakkımızda</a>
+                        <a>Hakkımda</a>
                     </Link>
                 </li>
                 
